@@ -171,54 +171,102 @@ var function =23;
 
 /********** ternary opertors *************/
 
-var firstName = 'John';
-var age = 10;
+// var firstName = 'John';
+// var age = 10;
 
-var drink = age>=18 ? 'beer' :'juice';
-age >=18 ? console.log(firstName + ' drinks '+ drink): console.log(firstName + ' drinks ' +drink);
+// var drink = age>=18 ? 'beer' :'juice';
+// age >=18 ? console.log(firstName + ' drinks '+ drink): console.log(firstName + ' drinks ' +drink);
 
 
 
-/********** switch statement *************/
-var job = 'instructor';
-switch(job){
-    case 'teacher' :
-    case 'instructor':
-        console.log(firstName + ' teaches code');
-        break;
-    case 'driver' :
-        console.log(firstName + ' drives uber');
-        break;
-    case 'designer'  :
-        console.log(firstName + ' designs');       
-        break;
-    default:
-        console.log(firstName + ' does something else');
+// /********** switch statement *************/
+// var job = 'instructor';
+// switch(job){
+//     case 'teacher' :
+//     case 'instructor':
+//         console.log(firstName + ' teaches code');
+//         break;
+//     case 'driver' :
+//         console.log(firstName + ' drives uber');
+//         break;
+//     case 'designer'  :
+//         console.log(firstName + ' designs');       
+//         break;
+//     default:
+//         console.log(firstName + ' does something else');
 
+// }
+
+// age =10;
+// switch(true){
+//     case age<13 :
+//         console.log(firstName + ' is a boy');
+//          break;
+//     case age>=13 && age <20:
+//         console.log(firstName +' is a teenager');
+//          break;
+//     case age>=20 && age<30:
+//         console.log(firstName + ' is a man');
+//      default:   
+//      console.log(firstName + ' old man');
+// }
+
+
+
+/************Truthy and falsy value and equality************/
+
+
+// var height;
+
+// var height = 23;
+// if(height || height === 0){
+//     console.log('Variable is defined');
+// }
+// else{
+//     console.log('variable is not being defined');
+// }
+
+// if(height == '23'){
+//     console.log('javascript does coercion')
+// }
+
+/******* Assignment 2 ********/
+
+var scoreJohn, scoreMark, scoreMary;
+
+scoreJohn = (89+120+103)/3;
+scoreMark = (116+94+123)/3;
+scoreMary = (97+134+102)/3;
+
+if(scoreJohn>scoreMark && scoreJohn>scoreMary){
+    console.log('winner is John team and average score : ' + scoreJohn);
+}
+else if(scoreMark > scoreJohn && scoreMark>scoreMary){
+    console.log('winner is Mark team and average score : ' + scoreMark);
+}
+else if(scoreMary>scoreJohn && scoreMary > scoreMark){
+    console.log('winner is Mary team and average score : ' + scoreMary);
+}
+else {
+    console.log('there is a tie');
 }
 
-age =10;
-switch(true){
-    case age<13 :
-        console.log(firstName + ' is a boy');
-         break;
-    case age>=13 && age <20:
-        console.log(firstName +' is a teenager');
-         break;
-    case age>=20 && age<30:
-        console.log(firstName + ' is a man');
-     default:   
-     console.log(firstName + ' old man');
-     
-}
 
 
-    // else if(){
-    //     );
-    // }
-    // else{
-    //     ;
-    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
