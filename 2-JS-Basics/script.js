@@ -277,6 +277,38 @@ yearsUntilRetirement(1969,'Jane');
 
 
 
+/*********  Function Statement and expressions  ************/
+
+
+var whatDoYouDo = function(job, firstName){
+    switch(job){
+        case 'teacher':
+            return firstName + ' teaches code';
+        case 'driver' :
+           return firstName + ' drives in uber';    
+        case 'designer' :
+            return firstName + ' design websites';
+        default :
+        return firstName + ' does something else';
+    }
+}
+
+console.log(whatDoYouDo('teacher','John'));
+console.log(whatDoYouDo('driver','Mike'));
+console.log(whatDoYouDo('designer','Jane'));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
