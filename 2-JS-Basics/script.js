@@ -117,40 +117,56 @@ var function =23;
 
 /*************If-else statements*************/
 
+// var firstName = 'John';
+// var civilStatus = 'single';
+
+// if(civilStatus === 'married'){
+//     console.log(firstName + ' is married');
+// }else{
+//     console.log(firstName + ' marry soon');
+// }
+
+// var isMarried = false
+// if(isMarried===true){
+//     console.log(firstName + ' is married');
+// }else{
+//     console.log(firstName + ' marry soon');
+// }
+
+// //height in meters and mass in kg
+// var bmiJohn, bmiMark, heightJohn, massJohn, heightMark, massMark, compareBmi;
+
+// massJohn = 100;
+// heightJohn = 3;
+// massMark =90;
+// heightMark = 3; 
+// bmiJohn = massJohn / (heightJohn * heightJohn);
+// bmiMark = massMark / (heightMark * heightMark);
+
+// if(bmiMark>bmiJohn){
+//     console.log('Mark\'s bmi is higher than John\'s');
+// }
+// else{
+//     console.log('John\'s Bmi is higher than Mark\'s ');
+// }
+
+
+/********** Boolean Logic *************/
+
 var firstName = 'John';
-var civilStatus = 'single';
+var age = 20;
 
-if(civilStatus === 'married'){
-    console.log(firstName + ' is married');
-}else{
-    console.log(firstName + ' marry soon');
+if(age<13){
+    console.log(firstName + ' is a boy');
+}else if(age>=13 && age <20){
+    console.log(firstName +' is a teenager');
 }
-
-var isMarried = false
-if(isMarried===true){
-    console.log(firstName + ' is married');
-}else{
-    console.log(firstName + ' marry soon');
-}
-
-//height in meters and mass in kg
-var bmiJohn, bmiMark, heightJohn, massJohn, heightMark, massMark, compareBmi;
-
-massJohn = 100;
-heightJohn = 3;
-massMark =90;
-heightMark = 3; 
-bmiJohn = massJohn / (heightJohn * heightJohn);
-bmiMark = massMark / (heightMark * heightMark);
-
-if(bmiMark>bmiJohn){
-    console.log('Mark\'s bmi is higher than John\'s');
+else if(age>=20 && age<30){
+    console.log(firstName + ' is a man');
 }
 else{
-    console.log('John\'s Bmi is higher than Mark\'s ');
+    console.log(firstName + 'old man');
 }
-
-
 
 
 
