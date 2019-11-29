@@ -153,20 +153,85 @@ var function =23;
 
 /********** Boolean Logic *************/
 
-var firstName = 'John';
-var age = 20;
+// var firstName = 'John';
+// var age = 20;
 
-if(age<13){
-    console.log(firstName + ' is a boy');
-}else if(age>=13 && age <20){
-    console.log(firstName +' is a teenager');
+// if(age<13){
+//     console.log(firstName + ' is a boy');
+// }else if(age>=13 && age <20){
+//     console.log(firstName +' is a teenager');
+// }
+// else if(age>=20 && age<30){
+//     console.log(firstName + ' is a man');
+// }
+// else{
+//     console.log(firstName + 'old man');
+// }
+
+
+/********** ternary opertors *************/
+
+var firstName = 'John';
+var age = 10;
+
+var drink = age>=18 ? 'beer' :'juice';
+age >=18 ? console.log(firstName + ' drinks '+ drink): console.log(firstName + ' drinks ' +drink);
+
+
+
+/********** switch statement *************/
+var job = 'instructor';
+switch(job){
+    case 'teacher' :
+    case 'instructor':
+        console.log(firstName + ' teaches code');
+        break;
+    case 'driver' :
+        console.log(firstName + ' drives uber');
+        break;
+    case 'designer'  :
+        console.log(firstName + ' designs');       
+        break;
+    default:
+        console.log(firstName + ' does something else');
+
 }
-else if(age>=20 && age<30){
-    console.log(firstName + ' is a man');
+
+age =10;
+switch(true){
+    case age<13 :
+        console.log(firstName + ' is a boy');
+         break;
+    case age>=13 && age <20:
+        console.log(firstName +' is a teenager');
+         break;
+    case age>=20 && age<30:
+        console.log(firstName + ' is a man');
+     default:   
+     console.log(firstName + ' old man');
+     
 }
-else{
-    console.log(firstName + 'old man');
-}
+
+
+    // else if(){
+    //     );
+    // }
+    // else{
+    //     ;
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
