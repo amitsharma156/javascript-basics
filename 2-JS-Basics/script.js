@@ -102,18 +102,68 @@ var function =23;
 /*********Assignment************/
 
 //height in meters and mass in kg
+// var bmiJohn, bmiMark, heightJohn, massJohn, heightMark, massMark, compareBmi;
+
+// massJohn = 80;
+// heightJohn = 3;
+// massMark =90;
+// heightMark = 3; 
+// bmiJohn = massJohn / (heightJohn * heightJohn);
+// bmiMark = massMark / (heightMark * heightMark);
+
+// compareBmi = bmiMark > bmiJohn;
+// console.log(bmiMark , bmiJohn);
+// console.log('Is Mark BMI higher than John bmi : ' + compareBmi)
+
+/*************If-else statements*************/
+
+var firstName = 'John';
+var civilStatus = 'single';
+
+if(civilStatus === 'married'){
+    console.log(firstName + ' is married');
+}else{
+    console.log(firstName + ' marry soon');
+}
+
+var isMarried = false
+if(isMarried===true){
+    console.log(firstName + ' is married');
+}else{
+    console.log(firstName + ' marry soon');
+}
+
+//height in meters and mass in kg
 var bmiJohn, bmiMark, heightJohn, massJohn, heightMark, massMark, compareBmi;
 
-massJohn = 80;
+massJohn = 100;
 heightJohn = 3;
 massMark =90;
 heightMark = 3; 
 bmiJohn = massJohn / (heightJohn * heightJohn);
 bmiMark = massMark / (heightMark * heightMark);
 
-compareBmi = bmiMark > bmiJohn;
-console.log(bmiMark , bmiJohn);
-console.log('Is Mark BMI higher than John bmi : ' + compareBmi)
+if(bmiMark>bmiJohn){
+    console.log('Mark\'s bmi is higher than John\'s');
+}
+else{
+    console.log('John\'s Bmi is higher than Mark\'s ');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
