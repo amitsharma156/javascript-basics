@@ -70,34 +70,69 @@ var function =23;
 
 /********* Operator precedence **************/
 
-var now = 2018 ;
-var yearJohn = 1989;
-var fullAge = 18;
-var isFullAge = now - yearJohn >= fullAge
+// var now = 2018 ;
+// var yearJohn = 1989;
+// var fullAge = 18;
+// var isFullAge = now - yearJohn >= fullAge
 
-console.log(isFullAge);
-var ageJohn = now-1989;
-var ageMark =  35;
-var average = (ageJohn + ageMark)/2 ;
-console.log(average);
+// console.log(isFullAge);
+// var ageJohn = now-1989;
+// var ageMark =  35;
+// var average = (ageJohn + ageMark)/2 ;
+// console.log(average);
 
-//multiple assignments
+// //multiple assignments
 
-var x,y;
+// var x,y;
 
-x =y = (3+5) *4 -6 ;
-console.log(x,y);
+// x =y = (3+5) *4 -6 ;
+// console.log(x,y);
 
-//More Operators
+// //More Operators
 
-x= x*2;
-console.log(x);
+// x= x*2;
+// console.log(x);
 
-x += 10;
-console.log(x);
+// x += 10;
+// console.log(x);
 
-x++;
-console.log(x);
+// x++;
+// console.log(x);
+
+/*********Assignment************/
+
+//height in meters and mass in kg
+var bmiJohn, bmiMark, heightJohn, massJohn, heightMark, massMark, compareBmi;
+
+massJohn = 80;
+heightJohn = 3;
+massMark =90;
+heightMark = 3; 
+bmiJohn = massJohn / (heightJohn * heightJohn);
+bmiMark = massMark / (heightMark * heightMark);
+
+compareBmi = bmiMark > bmiJohn;
+console.log(bmiMark , bmiJohn);
+console.log('Is Mark BMI higher than John bmi : ' + compareBmi)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
