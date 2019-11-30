@@ -418,6 +418,39 @@ john.calcAge();
 console.log(john);
 
 
+/***************Assignment on objects *******************/
+
+var mark ={
+    fullName : 'John',
+    height : 3,
+    mass : 90,
+    calcBmi : function(){
+        this.bmi = this.mass/(this.height*this.height);
+        return this.bmi;
+    }
+}
+
+var john = {
+    fullName : 'Mark',
+    height : 3,
+    mass : 80,
+    calcBmi : function(){
+        this.bmi = this.mass/(this.height*this.height);
+        return this.bmi;
+    }
+
+}
+
+if(john.calcBmi()>mark.calcBmi()){
+    console.log('John is higher BMI');
+}
+else if(john.calcBmi()<mark.calcBmi()){
+    console.log('Mark is higher BMI');
+}
+else{
+    console.log('They have equal BMI'+mark.bmi);
+}
+
 
 
 
