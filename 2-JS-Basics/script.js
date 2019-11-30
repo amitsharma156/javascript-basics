@@ -232,70 +232,166 @@ var function =23;
 
 /******* Assignment 2 ********/
 
-var scoreJohn, scoreMark, scoreMary;
+// var scoreJohn, scoreMark, scoreMary;
 
-scoreJohn = (89+120+103)/3;
-scoreMark = (116+94+123)/3;
-scoreMary = (97+134+102)/3;
+// scoreJohn = (89+120+103)/3;
+// scoreMark = (116+94+123)/3;
+// scoreMary = (97+134+102)/3;
 
-if(scoreJohn>scoreMark && scoreJohn>scoreMary){
-    console.log('winner is John team and average score : ' + scoreJohn);
-}
-else if(scoreMark > scoreJohn && scoreMark>scoreMary){
-    console.log('winner is Mark team and average score : ' + scoreMark);
-}
-else if(scoreMary>scoreJohn && scoreMary > scoreMark){
-    console.log('winner is Mary team and average score : ' + scoreMary);
-}
-else {
-    console.log('there is a tie');
-}
+// if(scoreJohn>scoreMark && scoreJohn>scoreMary){
+//     console.log('winner is John team and average score : ' + scoreJohn);
+// }
+// else if(scoreMark > scoreJohn && scoreMark>scoreMary){
+//     console.log('winner is Mark team and average score : ' + scoreMark);
+// }
+// else if(scoreMary>scoreJohn && scoreMary > scoreMark){
+//     console.log('winner is Mary team and average score : ' + scoreMary);
+// }
+// else {
+//     console.log('there is a tie');
+// }
 
-/*********  Functions   ************/
+// /*********  Functions   ************/
 
-function calculateAge(birthYear){
-    return 2018-birthYear;
-}
-var ageJohn = calculateAge(1988);
-var ageMike = calculateAge(1948);
-var ageJane = calculateAge(1969);
-console.log(ageJohn , ageMike, ageJane);
+// function calculateAge(birthYear){
+//     return 2018-birthYear;
+// }
+// var ageJohn = calculateAge(1988);
+// var ageMike = calculateAge(1948);
+// var ageJane = calculateAge(1969);
+// console.log(ageJohn , ageMike, ageJane);
 
-function yearsUntilRetirement(year, firstName){
-    var age = calculateAge(year);
-    var retirement = 65-age;
-    if(retirement>0){
-    console.log(firstName + ' retires in ' + retirement + ' years');
+// function yearsUntilRetirement(year, firstName){
+//     var age = calculateAge(year);
+//     var retirement = 65-age;
+//     if(retirement>0){
+//     console.log(firstName + ' retires in ' + retirement + ' years');
+//     }
+//     else{
+//         console.log('already retired');
+//     }
+// }
+// yearsUntilRetirement(1990,'John');
+// yearsUntilRetirement(1948,'Mike');
+// yearsUntilRetirement(1969,'Jane');
+
+
+
+// /*********  Function Statement and expressions  ************/
+
+
+// var whatDoYouDo = function(job, firstName){
+//     switch(job){
+//         case 'teacher':
+//             return firstName + ' teaches code';
+//         case 'driver' :
+//            return firstName + ' drives in uber';    
+//         case 'designer' :
+//             return firstName + ' design websites';
+//         default :
+//         return firstName + ' does something else';
+//     }
+// }
+
+// console.log(whatDoYouDo('teacher','John'));
+// console.log(whatDoYouDo('driver','Mike'));
+// console.log(whatDoYouDo('designer','Jane'));
+
+
+/******** Arrays  ***********/
+//Initialize array
+// var names = ['John','Mark','Jane'];
+// var years = new Array(1990,1969,1948);
+
+// console.log(names);
+// console.log(names.length);
+
+// //Mutate data
+// names[1] = 'Ben';
+// console.log(names);
+
+// names[names.length]= 'Mary';
+// console.log(names);
+
+// //different data types
+
+// var john = ['John','Smith',1990,'designer'];
+
+// john.push('blue');
+// console.log(john);
+
+// john.unshift('Mr.');
+// console.log(john);
+
+// john.pop();
+// console.log(john);
+
+// john.shift();
+// console.log(john);
+// console.log(john.indexOf(1990));
+
+// var isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer' :'John is a designer';
+// console.log(isDesigner);
+
+/*************   Assignment 3   ***************/
+
+
+var tipJohn=[], paidJohn=[],tip,paidBill;
+
+var tipCal = function(billAmount){
+    if(billAmount<50){
+        tip = 0.2*billAmount;
+        billPaid(billAmount,tip);
+        finalAmount(tip,paidBill);
+        return tip;
     }
-    else{
-        console.log('already retired');
+    else if(billAmount>=50 && billAmount<=200){
+        tip = 0.15*billAmount;
+        billPaid(billAmount,tip);
+        finalAmount(tip,paidBill);
+        return tip;
+    }
+    else if(billAmount>200){
+        tip = 0.1*billAmount;
+        billPaid(billAmount,tip);
+        finalAmount(tip,paidBill);
+        return tip;
     }
 }
-yearsUntilRetirement(1990,'John');
-yearsUntilRetirement(1948,'Mike');
-yearsUntilRetirement(1969,'Jane');
-
-
-
-/*********  Function Statement and expressions  ************/
-
-
-var whatDoYouDo = function(job, firstName){
-    switch(job){
-        case 'teacher':
-            return firstName + ' teaches code';
-        case 'driver' :
-           return firstName + ' drives in uber';    
-        case 'designer' :
-            return firstName + ' design websites';
-        default :
-        return firstName + ' does something else';
-    }
+var billPaid = function(billAmount,tip){
+    return paidBill = billAmount+tip;
 }
 
-console.log(whatDoYouDo('teacher','John'));
-console.log(whatDoYouDo('driver','Mike'));
-console.log(whatDoYouDo('designer','Jane'));
+var finalAmount= function(tip,billPaid){
+    paidJohn.push(billPaid);
+    tipJohn.push(tip)
+}
+tipCal(124);
+tipCal(48);
+tipCal(268);
+
+console.log(paidJohn);
+console.log(tipJohn);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
