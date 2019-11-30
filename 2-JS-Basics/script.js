@@ -336,124 +336,197 @@ var function =23;
 /*************   Assignment 3   ***************/
 
 
-var tipJohn=[], paidJohn=[],tip,paidBill;
+// var tipJohn=[], paidJohn=[],tip,paidBill;
 
-var tipCal = function(billAmount){
-    if(billAmount<50){
-        tip = 0.2*billAmount;
-        billPaid(billAmount,tip);
-        finalAmount(tip,paidBill);
-        return tip;
-    }
-    else if(billAmount>=50 && billAmount<=200){
-        tip = 0.15*billAmount;
-        billPaid(billAmount,tip);
-        finalAmount(tip,paidBill);
-        return tip;
-    }
-    else if(billAmount>200){
-        tip = 0.1*billAmount;
-        billPaid(billAmount,tip);
-        finalAmount(tip,paidBill);
-        return tip;
-    }
-}
-var billPaid = function(billAmount,tip){
-    return paidBill = billAmount+tip;
-}
+// var tipCal = function(billAmount){
+//     if(billAmount<50){
+//         tip = 0.2*billAmount;
+//         billPaid(billAmount,tip);
+//         finalAmount(tip,paidBill);
+//         return tip;
+//     }
+//     else if(billAmount>=50 && billAmount<=200){
+//         tip = 0.15*billAmount;
+//         billPaid(billAmount,tip);
+//         finalAmount(tip,paidBill);
+//         return tip;
+//     }
+//     else if(billAmount>200){
+//         tip = 0.1*billAmount;
+//         billPaid(billAmount,tip);
+//         finalAmount(tip,paidBill);
+//         return tip;
+//     }
+// }
+// var billPaid = function(billAmount,tip){
+//     return paidBill = billAmount+tip;
+// }
 
-var finalAmount= function(tip,billPaid){
-    paidJohn.push(billPaid);
-    tipJohn.push(tip)
-}
-tipCal(124);
-tipCal(48);
-tipCal(268);
+// var finalAmount= function(tip,billPaid){
+//     paidJohn.push(billPaid);
+//     tipJohn.push(tip)
+// }
+// tipCal(124);
+// tipCal(48);
+// tipCal(268);
 
-console.log(paidJohn);
-console.log(tipJohn);
-
-
-/**************    Objects   *****************/
-
-var john = {
-    firstName : 'John',
-    lastName : 'Smith',
-    birthYear : 1990,
-    family : ['Jane','Mark','Bob','Emily'],
-    job : 'teacher',
-    isMarried : false
-}
-
-var x = 'birthYear'
-console.log(john.firstName);
-console.log(john[x]);
+// console.log(paidJohn);
+// console.log(tipJohn);
 
 
-john.job = 'driver';
-john['isMarried'] =  true;
-console.log(john);
+// /**************    Objects   *****************/
 
-var jane = new Object();
-jane.name = 'Jane';
-jane.birthYear = 1990;
-jane['lastName'] = 'Smith';
-console.log(jane);
+// var john = {
+//     firstName : 'John',
+//     lastName : 'Smith',
+//     birthYear : 1990,
+//     family : ['Jane','Mark','Bob','Emily'],
+//     job : 'teacher',
+//     isMarried : false
+// }
 
-/************* Objects and methods *************/
+// var x = 'birthYear'
+// console.log(john.firstName);
+// console.log(john[x]);
 
-var john = {
-    firstName : 'John',
-    lastName : 'Smith',
-    birthYear : 1992,
-    family : ['Jane','Mark','Bob','Emily'],
-    job : 'teacher',
-    isMarried : false,
-    calcAge : function(){
-        this.age = 2018-this.birthYear;
+
+// john.job = 'driver';
+// john['isMarried'] =  true;
+// console.log(john);
+
+// var jane = new Object();
+// jane.name = 'Jane';
+// jane.birthYear = 1990;
+// jane['lastName'] = 'Smith';
+// console.log(jane);
+
+// /************* Objects and methods *************/
+
+// var john = {
+//     firstName : 'John',
+//     lastName : 'Smith',
+//     birthYear : 1992,
+//     family : ['Jane','Mark','Bob','Emily'],
+//     job : 'teacher',
+//     isMarried : false,
+//     calcAge : function(){
+//         this.age = 2018-this.birthYear;
         
+//     }
+// };
+// john.calcAge();
+// console.log(john);
+
+
+// /***************Assignment on objects *******************/
+
+// var mark ={
+//     fullName : 'John',
+//     height : 3,
+//     mass : 90,
+//     calcBmi : function(){
+//         this.bmi = this.mass/(this.height*this.height);
+//         return this.bmi;
+//     }
+// }
+
+// var john = {
+//     fullName : 'Mark',
+//     height : 3,
+//     mass : 80,
+//     calcBmi : function(){
+//         this.bmi = this.mass/(this.height*this.height);
+//         return this.bmi;
+//     }
+
+// }
+
+// if(john.calcBmi()>mark.calcBmi()){
+//     console.log('John is higher BMI');
+// }
+// else if(john.calcBmi()<mark.calcBmi()){
+//     console.log('Mark is higher BMI');
+// }
+// else{
+//     console.log('They have equal BMI'+mark.bmi);
+// }
+
+
+
+
+/**************  Combined assignment ******************/
+var john = {
+    firstName : 'John',
+     bill : [124,48,268,180,42],
+     tips :[],
+     billPaid : [],
+     
+     johnTip : function(){
+        for (i=0; i<this.bill.length; i++){
+          this.tips[i]=this.tipCalc(this.bill[i]);
+          this.billPaid[i] = this.tipCalc(this.bill[i])+this.bill[i];
+        }
+    },
+     tipCalc : function(amount){
+        if(amount<50){
+            return tip = 0.2*amount;
+        }
+        else if(amount>=50 && amount<=200){
+            return tip = 0.15 * amount;
+        }
+        else{
+            return tip = 0.1 * amount;
+        }
     }
-};
-john.calcAge();
+    
+}
+john.johnTip();
 console.log(john);
 
-
-/***************Assignment on objects *******************/
-
-var mark ={
-    fullName : 'John',
-    height : 3,
-    mass : 90,
-    calcBmi : function(){
-        this.bmi = this.mass/(this.height*this.height);
-        return this.bmi;
+var mark = {
+    firstName : 'Mark',
+    tips: [],
+    amountPaid: [],
+    
+    bill: [77, 375, 110, 45],
+    
+}
+var tipCalcMark = function (amount){
+    if(amount<100){
+        return  0.2*amount;
+    }
+    else if(amount>=100 && amount<=300){
+        return 0.1 * amount;
+    }
+    else{
+        return  0.25 * amount;
     }
 }
-
-var john = {
-    fullName : 'Mark',
-    height : 3,
-    mass : 80,
-    calcBmi : function(){
-        this.bmi = this.mass/(this.height*this.height);
-        return this.bmi;
+var markTips= function(){
+    for(i=0; i<mark.bill.length; i++){
+        mark.tips[i] = tipCalcMark(mark.bill[i]);
+        mark.amountPaid[i] = mark.tips[i]+mark.bill[i];
     }
-
 }
+markTips();
+console.log(mark);
 
-if(john.calcBmi()>mark.calcBmi()){
-    console.log('John is higher BMI');
+var averageTips = function (tips){
+    averageTip =0
+    for( i=0; i<tips.length; i++){
+        averageTip +=tips[i];
+    }
+    return averageTip/tips.length;
 }
-else if(john.calcBmi()<mark.calcBmi()){
-    console.log('Mark is higher BMI');
+john.average = averageTips(john.tips);
+john.average = averageTips(john.tips);
+
+
+if(john.average>mark.average){
+    console.log('John has given more tip than Mark');
+}else{
+    console.log('Mark has given more tip than john');
 }
-else{
-    console.log('They have equal BMI'+mark.bmi);
-}
-
-
-
-
 
 
 
