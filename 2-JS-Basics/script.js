@@ -374,6 +374,33 @@ console.log(paidJohn);
 console.log(tipJohn);
 
 
+/**************    Objects   *****************/
+
+var john = {
+    firstName : 'John',
+    lastName : 'Smith',
+    birthYear : 1990,
+    family : ['Jane','Mark','Bob','Emily'],
+    job : 'teacher',
+    isMarried : false
+}
+
+var x = 'birthYear'
+console.log(john.firstName);
+console.log(john[x]);
+
+
+john.job = 'driver';
+john['isMarried'] =  true;
+console.log(john);
+
+var jane = new Object();
+jane.name = 'Jane';
+jane.birthYear = 1990;
+jane['lastName'] = 'Smith';
+console.log(jane);
+
+
 
 
 
